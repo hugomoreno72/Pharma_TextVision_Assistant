@@ -49,35 +49,52 @@ A language model generates answers using the retrieved information.
 
 # Repository Structure
 
+├── PRESENTACION -> con la presentación del proyecto en formato ppt y PDF, jutno al video que aprece ene l ppt
+
+
 ├── 00_eda.py
+
+
 ├── 01_dataprocessing.py
+
+
 ├── 02_image.py
+
+
 ├── 02_raft_multimod.py
+
+
 ├── 03_multimod.py
+
+
 ├── 04_inference_vt.py
+
+
 ├── 05_evaluation.py
+
+
 └── README.md
 
 
-### 00_eda.py
+#### 00_eda.py
 Exploratory data analysis of the pharmaceutical dataset, inspecting missing values, text distributions and dataset quality.
 
-### 01_dataprocessing.py
+#### 01_dataprocessing.py
 Cleans and processes the dataset and builds the **FAISS vector database** used for semantic retrieval.
 
-### 02_image.py
+#### 02_image.py
 Processes the pharmaceutical image dataset and standardizes images for vision model training.
 
-### 02_raft_multimod.py
+#### 02_raft_multimod.py
 Implements **RAFT synthetic dataset generation**, creating question-answer pairs grounded in retrieved pharmaceutical context.
 
-### 03_multimod.py
+#### 03_multimod.py
 Builds the **final multimodal training dataset** by combining text and visual supervision.
 
-### 04_inference_vt.py
+#### 04_inference_vt.py
 Implements the **complete multimodal inference pipeline**, including image recognition and RAG-based answer generation.
 
-### 05_evaluation.py
+#### 05_evaluation.py
 Runs the **evaluation pipeline** using automatically generated questions and LLM-based grading.
 
 
@@ -89,7 +106,7 @@ The developed system demonstrates that combining **vision models with retrieval-
 
 The multimodal architecture allows the assistant to **identify medications from images and retrieve relevant pharmacological information**, enabling contextualized and grounded responses. The use of RAFT to generate synthetic training data also proved useful for expanding the dataset and improving the robustness of the multimodal model.
 
-However, several limitations remain. The performance of the system depends strongly on the **quality of the retrieved context**, meaning that incomplete or noisy entries in the pharmaceutical dataset can affect the generated answers. Additionally, the vision model may struggle with images that contain poor lighting conditions, unusual packaging formats, or partial visibility of the medication name.
+However, several limitations remain. The performance of the system depends on the **quality of the retrieved context**, meaning that incomplete or noisy entries in the pharmaceutical dataset can affect the generated answers. Additionally, the vision model may struggle with images that contain poor lighting conditions, unusual packaging formats, or partial visibility of the medication name.
 
 Despite these limitations, the results demonstrate the feasibility of building **domain-specific multimodal assistants for healthcare applications**, particularly when combining structured knowledge bases with modern large language models.
 
@@ -102,15 +119,9 @@ Several improvements could further enhance the system:
 
 • **Improved vision model fine-tuning** using a larger dataset of pharmaceutical packaging images.
 
-• **Higher quality medical datasets**, potentially including regulatory drug databases or clinical pharmacology resources.
+• **Higher quality medical datasets**, potentially including regulatory drug databases or clinical pharmacology resources. Likewise, include a medical history.
 
-• **Better retrieval strategies**, such as hybrid retrieval combining dense and keyword search.
-
-• **Improved evaluation metrics** beyond LLM-based grading.
-
-• **Deployment of a user interface**, enabling pharmacists or healthcare professionals to interact with the assistant.
-
-• **Integration with OCR pipelines**, allowing the system to read medication labels directly from images.
+• **Deployment of a user interface**, enabling pharmacists or healthcare professionals to interact with the assistant. With an application, it would also be possible to include a voice assistant.
 
 
 ---
@@ -161,6 +172,7 @@ Missing values were handled during preprocessing and replaced with: "no informat
 
 to ensure consistent document construction for embedding generation.
 
+link: https://data.mendeley.com/datasets/2vk5khfn6v/3
 ---
 
 ### 2. Pharmaceutical Image Dataset
@@ -176,7 +188,7 @@ Images were preprocessed by:
 
 The final processed image size used in the pipeline is: 470x470
 
-
+link: https://data.mendeley.com/datasets/sdfcbmjfnd/2
 
 ---
 
@@ -191,16 +203,14 @@ Python >= 3.10
 
 ### Required libraries
 
-torch
-transformers
-faiss-cpu
-sentence-transformers
-pandas
-numpy
-Pillow
-matplotlib
-seaborn
-unsloth
+- torch
+- transformers
+- faiss-cpu
+- sentence-transformers
+- pandas
+- numpy
+- matplotlib
+- unsloth
 
 
 ### API Keys
