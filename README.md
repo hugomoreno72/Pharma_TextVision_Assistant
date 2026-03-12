@@ -217,4 +217,4 @@ The project requires access to a language model API for RAFT dataset generation 
 
 # Author
 
-Final project developed by 'Les alucines' as part of an **AI Engineering / LLM Bootcamp**, focusing on building real-world multimodal AI systems combining vision, retrieval, and large language models.
+Final project developed by 'Les alucines' as part of an **AI Engineering BOOTCAMP edition IV**.
