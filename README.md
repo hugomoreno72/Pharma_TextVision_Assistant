@@ -51,27 +51,19 @@ A language model generates answers using the retrieved information.
 
 ├── PRESENTACION -> con la presentación del proyecto en formato ppt y PDF, jutno al video que aprece ene l ppt
 
-
 ├── 00_eda.py
-
 
 ├── 01_dataprocessing.py
 
-
 ├── 02_image.py
-
 
 ├── 02_raft_multimod.py
 
-
 ├── 03_multimod.py
-
 
 ├── 04_inference_vt.py
 
-
 ├── 05_evaluation.py
-
 
 └── README.md
 
@@ -173,6 +165,7 @@ Missing values were handled during preprocessing and replaced with: "no informat
 to ensure consistent document construction for embedding generation.
 
 link: https://data.mendeley.com/datasets/2vk5khfn6v/3
+
 ---
 
 ### 2. Pharmaceutical Image Dataset
