@@ -49,7 +49,7 @@ A language model generates answers using the retrieved information.
 
 # Repository Structure
 
-├── PRESENTACION -> con la presentación del proyecto en formato ppt y PDF, junto al video que aparece en la presentación ppt
+├── PRESENTACION -> con la presentación del proyecto en formato ppt y PDF, junto al video que aparece en la presentación ppt.
 
 ├── 00_eda.py
 
